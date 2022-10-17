@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import { Usage as CompoundComponent } from "./patterns/compound-component/Usage";
 
-function App() {
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faPlus,
+  faPlusCircle,
+  faPlusSquare,
+  faMinus,
+  faMinusCircle,
+  faMinusSquare,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(
+  faPlus,
+  faPlusCircle,
+  faPlusSquare,
+  faMinus,
+  faMinusCircle,
+  faMinusSquare
+);
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledContainer>
+      <StyledTitleContainer>
+        <h1>Advanced React Pattern</h1>
+      </StyledTitleContainer>
+
+      <StyledPatternContainer>
+        <h2>Compound component pattern</h2>
+        <CompoundComponent />
+      </StyledPatternContainer>
+    </StyledContainer>
   );
 }
 
-export default App;
+const StyledContainer = styled.div`
+  text-align: center;
+  font-family: sans-serif;
+`;
+
+const StyledTitleContainer = styled.div`
+  background-color: #1428a0;
+  color: white;
+  padding: 35px;
+  > h1 {
+    margin: 0;
+  }
+`;
+
+const StyledPatternContainer = styled.div`
+  padding: 30px;
+  border-bottom: 2px solid #d3d3d3;
+  &:last-child {
+    border: none;
+  }
+  > h2 {
+    margin-top: 0;
+  }
+`;
