@@ -1,7 +1,7 @@
 import React from "react";
 import { Counter } from "./Counter";
 
-function Usage() {
+function Index() {
   const handleChangeCounter = (count) => {
     console.log("count", count);
   };
@@ -16,4 +16,4 @@ function Usage() {
   );
 }
 
-export { Usage };
+export default Index;

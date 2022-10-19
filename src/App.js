@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Usage as CompoundComponent } from "./patterns/compound-component/Usage";
+import CompoundComponent from "./patterns/CompoundComponent/Index";
+import ControlProps from "./patterns/ControlProps/Index";
+import CustomHooks from "./patterns/CustomHooks/Index";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -30,6 +32,16 @@ export default function App() {
       <StyledPatternContainer>
         <h2>Compound component pattern</h2>
         <CompoundComponent />
+      </StyledPatternContainer>
+
+      <StyledPatternContainer>
+        <h2>Control Props Pattern</h2>
+        <ControlProps />
+      </StyledPatternContainer>
+
+      <StyledPatternContainer>
+        <h2>Custom Hooks Pattern</h2>
+        <CustomHooks />
       </StyledPatternContainer>
     </StyledContainer>
   );
