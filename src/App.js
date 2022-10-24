@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CompoundComponent from "./patterns/CompoundComponent/Index";
 import ControlProps from "./patterns/ControlProps/Index";
 import CustomHooks from "./patterns/CustomHooks/Index";
+import PropsGetters from "./patterns/PropsGetters/Index";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -42,6 +43,11 @@ export default function App() {
       <StyledPatternContainer>
         <h2>Custom Hooks Pattern</h2>
         <CustomHooks />
+      </StyledPatternContainer>
+
+      <StyledPatternContainer>
+        <h2>Props Getter Pattern</h2>
+        <PropsGetters />
       </StyledPatternContainer>
     </StyledContainer>
   );
