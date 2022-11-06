@@ -9,6 +9,7 @@ const Index = () => {
 
   const handleClickIncrement = () => {
     //Put your custom logic
+    console.log("ghkdxogus");
     if (count < MAX_COUNT) {
       handleIncrement();
     }

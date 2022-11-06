@@ -12,10 +12,6 @@ function Index() {
       max: MAX_COUNT,
     });
 
-  const handleBtn1Clicked = () => {
-    console.log("btn 1 clicked");
-  };
-
   return (
     <>
       <Counter {...getCounterProps()}>
@@ -25,13 +21,11 @@ function Index() {
         <Counter.Increment icon={"plus"} {...getIncrementProps()} />
       </Counter>
       <StyledContainer>
-        <button {...getIncrementProps({ onClick: handleBtn1Clicked })}>
-          Custom increment btn 1
-        </button>
+        <button {...getIncrementProps()}>10까지 증가</button>
       </StyledContainer>
       <StyledContainer>
         <button {...getIncrementProps({ disabled: count > MAX_COUNT - 2 })}>
-          Custom increment btn 2
+          9까지 증가
         </button>
       </StyledContainer>
     </>
