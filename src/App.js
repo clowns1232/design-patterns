@@ -4,6 +4,7 @@ import CompoundComponent from "./patterns/CompoundComponent/Index";
 import ControlProps from "./patterns/ControlProps/Index";
 import CustomHooks from "./patterns/CustomHooks/Index";
 import PropsGetters from "./patterns/PropsGetters/Index";
+import StateReducer from "./patterns/StateReducer/Index";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -48,6 +49,11 @@ export default function App() {
       <StyledPatternContainer>
         <h2>Props Getter Pattern</h2>
         <PropsGetters />
+      </StyledPatternContainer>
+
+      <StyledPatternContainer>
+        <h2>state reducer Pattern</h2>
+        <StateReducer />
       </StyledPatternContainer>
     </StyledContainer>
   );
